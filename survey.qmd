@@ -1,0 +1,269 @@
+---
+survey-settings:
+  show-previous: false
+  use-cookies: false
+  all-required: true
+  highlight-unanswered: true
+  system-language: en
+---
+
+```{r}
+library(surveydown)
+
+choice_options <- c(
+  "Probability Sample"               = "prob",
+  "Non-Probability Web Panel (NWP)"  = "nwp"
+)
+
+strength_options <- c(
+  "1 - Strongly prefer Non-Probability" = "1",
+  "2" = "2", "3" = "3", "4" = "4", "5" = "5", "6" = "6",
+  "7 - Strongly prefer Probability"     = "7"
+)
+```
+
+--- welcome
+
+# Welcome
+
+Thank you for taking part. On the following pages you will read a short scenario and then make a series of decisions.
+
+--- scenario
+
+# Scenario
+
+Suppose you are the responsible manager of a three-year research project that has already been approved. The project includes a survey of the general population (n = 1,000, 20 minutes), which is very important for the project. In the survey, you are interested in a set of key variables that relate to characteristics of the general population. In the survey, you are not interested in the detailed characteristics of specific subgroups, but primarily in the entire general population.
+
+You must choose between two sample types: a **Probability-based Online Sample** or a commercial **Non-Probability Web Panel** (e.g., Ipsos). The sample type is not yet determined, but it is a matter of your decision.
+
+**Assume the following conditions as TRUE:**
+
+- Sufficient time is available for preparing and conducting the survey.
+- You are not collaborating with other partners on this project.
+- Within your organization, you have complete autonomy in choosing the sample and allocating resources.
+- The sample type does not impact the possibility of publication in scientific journals. The journal editors of the journals you are considering have explicitly stated they accept non-probability samples if the methodology is transparent.
+- There is no dominant sampling tradition in this field; researchers use probability and non-probability samples with equal frequency.
+- Your past practice of selecting a sampling method does not inherently influence the decision.
+- Consider the principle of economic use of funds.
+- Regardless of the survey provider and your institution practices, assume the results and methodology will be publicly disseminated and archived.
+- Assume that standard weighting and cleaning have already been applied. The bias levels described below represent the remaining error in the final data.
+
+On the next pages, this scenario stays the same. Only the specific circumstances change. Please read them carefully each time.
+
+--- task_1
+
+# Decision 1 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_1")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_1",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_1",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_2
+
+# Decision 2 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_2")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_2",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_2",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_3
+
+# Decision 3 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_3")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_3",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_3",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_4
+
+# Decision 4 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_4")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_4",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_4",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_5
+
+# Decision 5 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_5")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_5",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_5",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_6
+
+# Decision 6 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_6")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_6",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_6",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_7
+
+# Decision 7 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_7")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_7",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_7",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- task_8
+
+# Decision 8 of 8
+
+<details><summary>Show the scenario and assumptions again</summary>
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+</details>
+
+```{r}
+sd_output("vignette_8")
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "choice_8",
+  label  = "Based on the scenario above, which sample type would you choose?",
+  option = choice_options
+)
+
+sd_question(
+  type   = "mc_buttons",
+  id     = "strength_8",
+  label  = "How strong is your preference for the sample type you chose?",
+  option = strength_options
+)
+```
+
+--- end
+
+# Thank you!
+
+Your responses have been recorded. Your completion code is: `r sd_output("completion_code", type = "value")`
+
+```{r}
+sd_close()
+```
