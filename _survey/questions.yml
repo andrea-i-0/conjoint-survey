@@ -1,0 +1,171 @@
+# ! JUST READ - don't change the content of this file
+# Question structure extracted from survey.html
+choice_1:
+  index: 1
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_1:
+  index: 2
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_2:
+  index: 3
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_2:
+  index: 4
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_3:
+  index: 5
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_3:
+  index: 6
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_4:
+  index: 7
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_4:
+  index: 8
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_5:
+  index: 9
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_5:
+  index: 10
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_6:
+  index: 11
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_6:
+  index: 12
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_7:
+  index: 13
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_7:
+  index: 14
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+choice_8:
+  index: 15
+  type: mc_buttons
+  label: Based on the scenario above, which sample type would you choose?
+  label_html: Based on the scenario above, which sample type would you choose?
+  options:
+    Probability Sample: prob
+    Non-Probability Web Panel (NWP): nwp
+strength_8:
+  index: 16
+  type: mc_buttons
+  label: How strong is your preference for the sample type you chose?
+  label_html: How strong is your preference for the sample type you chose?
+  options:
+    1 - Strongly prefer Non-Probability: '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    7 - Strongly prefer Probability: '7'
+
