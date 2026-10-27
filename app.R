@@ -17,8 +17,6 @@ n_tasks <- max(design$qID)
 # Database --------------------------------------------------------------------
 #
 # Run sd_db_config() once to save your supabase credentials in a .env file.
-# ignore = TRUE: test locally without writing to the database.
-# Set ignore = FALSE (or delete it) when you go live.
 
 db <- sd_db_connect()
 
@@ -31,7 +29,7 @@ ui <- sd_ui()
 eur <- function(x) paste0("&euro;", format(x, big.mark = ",", scientific = FALSE, trim = TRUE))
 
 img <- function(file) {
-  glue('<p><img src="images/{file}" style="width:100%; max-width:420px;"></p>')
+  glue('<img src="images/{file}" style="width:100%; max-width:240px; display:block; margin-top:0.5em;">')
 }
 
 txt_importance <- c(
@@ -39,69 +37,91 @@ txt_importance <- c(
   decisive    = "The survey results will have a decisive impact on policy-making in the studied area, so it is crucial that the population parameter estimates are as accurate as possible."
 )
 
+# Bias text for one panel
 txt_bias <- function(b) {
   if (b == 0) {
-    return("Regardless of the sample type selected, all estimates would be unbiased. This means that the correct proportion or average would be obtained.")
+    return("Unbiased: the correct proportion or average would be obtained.")
   }
-  nwp_label <- if (b == 5) "the non-probability sample (NWP)" else "the NWP"
   glue(
-    "Based on prior research in this area, we know that the probability sample provides ",
-    "unbiased estimates, while in {nwp_label}, some estimates would have a relative bias of {b}%. ",
-    "This means, for example, that instead of the correct proportion of 0.30, an estimate of ",
+    "Prior research shows that this sample would yield some estimates with {b}% relative bias. ",
+    "For example, instead of the correct proportion of 0.30, an estimate of ",
     "{format(0.30 * (1 + b / 100), nsmall = 2)} might be obtained, or instead of the correct ",
     "average of 3.0 on a scale of 1-5, a biased estimate of {format(3 * (1 + b / 100), nsmall = 1)} might be obtained."
   )
 }
 
-txt_proportion <- c(
-  "1/20" = "The above-mentioned bias affects 1/20 (5%) of all key variables (e.g., 1 out of 20 variables). It is assumed that all key variables are equally important.",
-  "1/10" = "The above-mentioned bias affects 1/10 (10%) of all key variables (e.g., 2 out of 20 variables). It is assumed that all key variables are equally important.",
-  "1/5"  = "The above-mentioned bias affects 1/5 (20%) of all key variables (e.g., 4 out of 20 variables). It is assumed that all key variables are equally important.",
-  "1/2"  = "The above-mentioned bias affects 1/2 (50%) of all key variables (e.g., 10 out of 20 variables). It is assumed that all key variables are equally important.",
-  "all"  = "The above-mentioned bias affects all key variables (e.g., 20 out of 20 variables). It is assumed that all key variables are equally important."
+txt_scope <- c(
+  "none" = "None.",
+  "1/20" = "The above-mentioned bias affects 1/20 (5%) of all key variables (e.g., 1 out of 20 variables).",
+  "1/10" = "The above-mentioned bias affects 1/10 (10%) of all key variables (e.g., 2 out of 20 variables).",
+  "1/5"  = "The above-mentioned bias affects 1/5 (20%) of all key variables (e.g., 4 out of 20 variables).",
+  "1/2"  = "The above-mentioned bias affects 1/2 (50%) of all key variables (e.g., 10 out of 20 variables).",
+  "all"  = "The above-mentioned bias affects all key variables (e.g., 20 out of 20 variables)."
 )
 
-img_bias       <- c(`0` = "bias_0.png", `5` = "bias_5.png", `10` = "bias_10.png", `30` = "bias_30.png")
-img_proportion <- c("1/20" = "prop_1_20.png", "1/10" = "prop_1_10.png", "1/5" = "prop_1_5.png",
-                    "1/2" = "prop_1_2.png", "all" = "prop_all.png")
+img_bias  <- c(`5` = "bias_5.png", `10` = "bias_10.png", `30` = "bias_30.png")
+img_scope <- c("1/20" = "prop_1_20.png", "1/10" = "prop_1_10.png", "1/5" = "prop_1_5.png",
+               "1/2" = "prop_1_2.png", "all" = "prop_all.png")
 
-txt_frame <- function(row) {
-  pc <- eur(row$prob_cost); d <- eur(row$difference); p <- paste0(row$percent, "%")
-  switch(
-    row$frame,
-    neutral = "Since the cost is identical for both methods, there is no impact on other project funds.",
-    savings = glue(
-      "In the project, you have allocated <b>{pc}</b> for the survey, which is the cost of a probability sample. ",
-      "If you choose the NWP, you will have <b>{d}</b> ({pc} - &euro;4,000) in savings available, which you can freely ",
-      "spend on professional development (e.g., conference attendance, professional training) or on further improving ",
-      "the project (e.g., increasing the sample size, hiring additional collaborators, procuring additional services). ",
-      "If you choose the probability sample, these additional funds will not be available."
-    ),
-    loss = glue(
-      "In the project, the funds for the survey are not strictly predetermined. If you choose a probability sample, ",
-      "which is somewhat more expensive than the NWP, you will have less funding for other project activities, ",
-      "specifically <b>{d}</b> less ({pc} - &euro;4,000), meaning you will need to save about <b>{p}</b> of the funds on other costs."
+txt_frame <- c(
+  savings   = "You have budgeted for the higher cost of the Probability Sample. If you choose the Non-Probability Web Panel, the significant cost difference becomes surplus funding which you can freely spend on professional development (e.g., conferences, training) or on improving the project (e.g., larger sample size, additional staff). If you choose the Probability Sample, these extra funds will not be available.",
+  loss      = "The project budget is tight. If you choose the Probability Sample, the higher cost means you will have significantly less funding available for other project activities. This will require you to cut costs elsewhere, reducing the budget for professional development, staff hours, or other project services.",
+  no_impact = "Costs are identical; no impact."
+)
+
+# One panel (column) of the comparison
+make_panel <- function(type, row) {
+  if (type == "prob") {
+    list(
+      name  = "Probability-based online panel",
+      bias  = txt_bias(0),
+      scope = txt_scope[["none"]],
+      cost  = eur(row$prob_cost)
     )
-  )
+  } else {
+    list(
+      name  = "Nonprobability online panel",
+      bias  = paste0(txt_bias(row$nwp_bias),
+                     if (row$nwp_bias > 0) img(img_bias[[as.character(row$nwp_bias)]]) else ""),
+      scope = paste0(txt_scope[[row$nwp_scope]],
+                     if (row$nwp_scope != "none") img(img_scope[[row$nwp_scope]]) else ""),
+      cost  = eur(row$nwp_cost)
+    )
+  }
 }
 
 make_vignette <- function(row) {
-  items <- c(
-    paste0("<b>Importance of research results.</b> ", txt_importance[[row$importance]]),
-    paste0("<b>Bias.</b> ", txt_bias(row$bias), img(img_bias[[as.character(row$bias)]])),
-    if (row$bias != 0) {
-      paste0("<b>Proportion of variables with bias.</b> ", txt_proportion[[row$proportion]],
-             img(img_proportion[[row$proportion]]))
-    },
-    paste0("<b>Project value.</b> The entire budget of the project is ", eur(row$budget), "."),
-    paste0("<b>Cost.</b> If the survey were conducted in the NWP, it would cost &euro;4,000; if it were conducted in a probability sample, it would ",
-           if (row$cost == "equal") "also cost &euro;4,000." else paste0("cost ", eur(row$prob_cost), ".")),
-    paste0("<b>Funds for other activities.</b> ", txt_frame(row))
-  )
+  order <- if (row$prob_left) c("prob", "nwp") else c("nwp", "prob")
+  L <- make_panel(order[1], row)
+  R <- make_panel(order[2], row)
+
+  shared <- function(label, text) {
+    glue("<tr><th>{label}</th><td colspan='2' class='shared'>{text}</td></tr>")
+  }
+  split <- function(label, a, b) {
+    glue("<tr><th>{label}</th><td>{a}</td><td>{b}</td></tr>")
+  }
+
   HTML(paste0(
-    "<p>Please consider the following specific circumstances for this decision:</p><ol>",
-    paste0("<li style='margin-bottom:1em;'>", items, "</li>", collapse = ""),
-    "</ol>"
+    "<style>
+      .vig {border-collapse:collapse; width:100%; font-size:0.95em; table-layout:fixed;}
+      .vig th, .vig td {border:1px solid #ccc; padding:8px; vertical-align:top; text-align:left;}
+      .vig th {width:20%; background:#f5f5f5;}
+      .vig td {width:40%;}
+      .vig thead td {font-weight:bold; text-align:center; background:#e8eef7;}
+      .vig td.shared {text-align:center; font-style:italic;}
+    </style>",
+    "<p>Please consider the following specific circumstances for this decision:</p>",
+    "<table class='vig'>",
+    "<thead><tr><th></th><td>", L$name, "</td><td>", R$name, "</td></tr></thead>",
+    shared("Importance of research results", txt_importance[[row$importance]]),
+    split("Relative bias", L$bias, R$bias),
+    split("Proportion of variables with relative bias", L$scope, R$scope),
+    shared("Project value", paste0("The entire budget of the project is ", eur(row$budget), ".")),
+    split("Cost of the survey", L$cost, R$cost),
+    shared("Funds for other activities", txt_frame[[row$frame]]),
+    "</table>",
+    "<p style='font-size:0.85em; margin-top:0.5em;'>All key variables are assumed to be equally important.</p>"
   ))
 }
 

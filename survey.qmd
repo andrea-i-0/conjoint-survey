@@ -11,8 +11,8 @@ survey-settings:
 library(surveydown)
 
 choice_options <- c(
-  "Probability Sample"               = "prob",
-  "Non-Probability Web Panel (NWP)"  = "nwp"
+  "Probability-based online panel" = "prob",
+  "Nonprobability online panel"    = "nwp"
 )
 
 strength_options <- c(
@@ -32,16 +32,16 @@ Thank you for taking part. On the following pages you will read a short scenario
 
 # Scenario
 
-Suppose you are the responsible manager of a three-year research project that has already been approved. The project includes a survey of the general population (n = 1,000, 20 minutes), which is very important for the project. In the survey, you are interested in a set of key variables that relate to characteristics of the general population. In the survey, you are not interested in the detailed characteristics of specific subgroups, but primarily in the entire general population.
+Suppose you are the responsible manager of a three-year research project that has already been approved. The project includes a survey of the general population (n = 1,000, 20 minutes), which is very important for the project. In the survey, you are interested in a set of key variables that relate to characteristics of the general population (not interested in detailed characteristics of specific subgroups).
 
-You must choose between two sample types: a **Probability-based Online Sample** or a commercial **Non-Probability Web Panel** (e.g., Ipsos). The sample type is not yet determined, but it is a matter of your decision.
+You must choose between two sample types: a sample from a **Probability-based Online Panel** or from a commercial **Nonprobability Online Panel** (e.g., Ipsos). The sample type is not yet determined, but it is a matter of your decision.
 
 **Assume the following conditions as TRUE:**
 
 - Sufficient time is available for preparing and conducting the survey.
 - You are not collaborating with other partners on this project.
 - Within your organization, you have complete autonomy in choosing the sample and allocating resources.
-- The sample type does not impact the possibility of publication in scientific journals. The journal editors of the journals you are considering have explicitly stated they accept non-probability samples if the methodology is transparent.
+- The sample type does not impact the possibility of publication in scientific journals. The journal editors of the journals you are considering have explicitly stated they accept non-probability samples if the methodology is transparent and well justified.
 - There is no dominant sampling tradition in this field; researchers use probability and non-probability samples with equal frequency.
 - Your past practice of selecting a sampling method does not inherently influence the decision.
 - Consider the principle of economic use of funds.
@@ -55,7 +55,7 @@ On the next pages, this scenario stays the same. Only the specific circumstances
 # Decision 1 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -74,6 +74,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_1",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_2
@@ -81,7 +87,7 @@ sd_question(
 # Decision 2 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -100,6 +106,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_2",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_3
@@ -107,7 +119,7 @@ sd_question(
 # Decision 3 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -126,6 +138,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_3",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_4
@@ -133,7 +151,7 @@ sd_question(
 # Decision 4 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -152,6 +170,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_4",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_5
@@ -159,7 +183,7 @@ sd_question(
 # Decision 5 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -178,6 +202,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_5",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_6
@@ -185,7 +215,7 @@ sd_question(
 # Decision 6 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -204,6 +234,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_6",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_7
@@ -211,7 +247,7 @@ sd_question(
 # Decision 7 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -230,6 +266,12 @@ sd_question(
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
 )
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_7",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+)
 ```
 
 --- task_8
@@ -237,7 +279,7 @@ sd_question(
 # Decision 8 of 8
 
 <details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 
 ```{r}
@@ -255,6 +297,12 @@ sd_question(
   id     = "strength_8",
   label  = "How strong is your preference for the sample type you chose?",
   option = strength_options
+)
+
+sd_question(
+  type   = "numeric",
+  id     = "maxprice_8",
+  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
 )
 ```
 
