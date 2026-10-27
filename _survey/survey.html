@@ -4102,14 +4102,14 @@ font-weight: 800;
 </section>
 <section id="scenario" class="level1 sd_page">
 <h1>Scenario</h1>
-<p>Suppose you are the responsible manager of a three-year research project that has already been approved. The project includes a survey of the general population (n = 1,000, 20 minutes), which is very important for the project. In the survey, you are interested in a set of key variables that relate to characteristics of the general population. In the survey, you are not interested in the detailed characteristics of specific subgroups, but primarily in the entire general population.</p>
-<p>You must choose between two sample types: a <strong>Probability-based Online Sample</strong> or a commercial <strong>Non-Probability Web Panel</strong> (e.g., Ipsos). The sample type is not yet determined, but it is a matter of your decision.</p>
+<p>Suppose you are the responsible manager of a three-year research project that has already been approved. The project includes a survey of the general population (n = 1,000, 20 minutes), which is very important for the project. In the survey, you are interested in a set of key variables that relate to characteristics of the general population (not interested in detailed characteristics of specific subgroups).</p>
+<p>You must choose between two sample types: a sample from a <strong>Probability-based Online Panel</strong> or from a commercial <strong>Nonprobability Online Panel</strong> (e.g., Ipsos). The sample type is not yet determined, but it is a matter of your decision.</p>
 <p><strong>Assume the following conditions as TRUE:</strong></p>
 <ul>
 <li>Sufficient time is available for preparing and conducting the survey.</li>
 <li>You are not collaborating with other partners on this project.</li>
 <li>Within your organization, you have complete autonomy in choosing the sample and allocating resources.</li>
-<li>The sample type does not impact the possibility of publication in scientific journals. The journal editors of the journals you are considering have explicitly stated they accept non-probability samples if the methodology is transparent.</li>
+<li>The sample type does not impact the possibility of publication in scientific journals. The journal editors of the journals you are considering have explicitly stated they accept non-probability samples if the methodology is transparent and well justified.</li>
 <li>There is no dominant sampling tradition in this field; researchers use probability and non-probability samples with equal frequency.</li>
 <li>Your past practice of selecting a sampling method does not inherently influence the decision.</li>
 <li>Consider the principle of economic use of funds.</li>
@@ -4125,7 +4125,7 @@ font-weight: 800;
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4175,13 +4175,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_1" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_1" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -4246,6 +4246,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_1" data-question-id="maxprice_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_1_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_1-label" for="maxprice_1"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_1" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -4256,7 +4266,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4306,13 +4316,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_2" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_2" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -4377,6 +4387,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_2" data-question-id="maxprice_2" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_2_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_2_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_2-label" for="maxprice_2"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_2" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -4387,7 +4407,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4437,13 +4457,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_3" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_3" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -4508,6 +4528,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_3" data-question-id="maxprice_3" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_3_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_3_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_3-label" for="maxprice_3"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_3" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -4518,7 +4548,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4568,13 +4598,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_4" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_4" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -4639,6 +4669,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_4" data-question-id="maxprice_4" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_4_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_4_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_4-label" for="maxprice_4"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_4" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -4649,7 +4689,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4699,13 +4739,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_5" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_5" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -4770,6 +4810,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_5" data-question-id="maxprice_5" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_5_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_5_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_5-label" for="maxprice_5"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_5" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -4780,7 +4830,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4830,13 +4880,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_6" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_6" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -4901,6 +4951,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_6" data-question-id="maxprice_6" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_6_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_6_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_6-label" for="maxprice_6"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_6" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -4911,7 +4971,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -4961,13 +5021,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_7" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_7" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -5032,6 +5092,16 @@ Non-Probability Web Panel (NWP)
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="container-maxprice_7" data-question-id="maxprice_7" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_7_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_7_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_7-label" for="maxprice_7"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_7" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
 </div>
 </section>
 </div>
@@ -5042,7 +5112,7 @@ Non-Probability Web Panel (NWP)
 <summary>
 Show the scenario and assumptions again
 </summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Sample and a commercial Non-Probability Web Panel (NWP). All assumptions from the scenario page still apply.
+Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
 </details>
 <div class="cell">
 <div class="cell-output-display no-overflow-x">
@@ -5092,13 +5162,13 @@ Three-year approved project; general population survey (n = 1,000, 20 minutes); 
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_8" value="prob">
-Probability Sample
+Probability-based online panel
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="choice_8" value="nwp">
-Non-Probability Web Panel (NWP)
+Nonprobability online panel
 </button>
 </div>
 </div>
@@ -5159,6 +5229,16 @@ Non-Probability Web Panel (NWP)
 </div>
 </div>
 </div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container-maxprice_8" data-question-id="maxprice_8" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_8_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_8_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="maxprice_8-label" for="maxprice_8"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+</label>
+<input id="maxprice_8" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
 <span class="hidden-asterisk">*</span>
 </div>
