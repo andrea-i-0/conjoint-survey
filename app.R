@@ -12,7 +12,7 @@ library(readr)
 # Design file (made by code/make_design.R) ------------------------------------
 
 design  <- read_csv(here("data", "design.csv"), show_col_types = FALSE)
-n_tasks <- max(design$qID)
+n_tasks <- 6
 
 # Database --------------------------------------------------------------------
 #
@@ -94,14 +94,14 @@ make_vignette <- function(row) {
   order <- if (row$prob_left) c("prob", "nwp") else c("nwp", "prob")
   L <- make_panel(order[1], row)
   R <- make_panel(order[2], row)
-
+  
   shared <- function(label, text) {
     glue("<tr><th>{label}</th><td colspan='2' class='shared'>{text}</td></tr>")
   }
   split <- function(label, a, b) {
     glue("<tr><th>{label}</th><td>{a}</td><td>{b}</td></tr>")
   }
-
+  
   HTML(paste0(
     "<style>
       .vig {border-collapse:collapse; width:100%; font-size:0.95em; table-layout:fixed;}
@@ -131,17 +131,17 @@ server <- function(input, output, session) {
   # Assign this respondent a random block and save it
   resp_id <- sample(unique(design$respID), 1)
   sd_store_value(resp_id, "respID")
-
+  
   df <- design |> filter(respID == resp_id) |> arrange(qID)
-
+  
   # One vignette output per task: vignette_1, vignette_2, ...
   lapply(seq_len(n_tasks), function(k) {
     output[[paste0("vignette_", k)]] <- renderUI(make_vignette(df[k, ]))
   })
-
+  
   completion_code <- sd_completion_code(10)
   sd_store_value(completion_code)
-
+  
   sd_server(db = db)
 }
 

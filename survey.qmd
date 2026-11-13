@@ -16,9 +16,11 @@ choice_options <- c(
 )
 
 strength_options <- c(
-  "1 - Strongly prefer Non-Probability" = "1",
-  "2" = "2", "3" = "3", "4" = "4", "5" = "5", "6" = "6",
-  "7 - Strongly prefer Probability"     = "7"
+  "1 - Strongly prefer Nonprobability" = "1",
+  "2" = "2", "3" = "3",
+  "4 - No preference"                  = "4",
+  "5" = "5", "6" = "6",
+  "7 - Strongly prefer Probability"    = "7"
 )
 ```
 
@@ -27,6 +29,93 @@ strength_options <- c(
 # Welcome
 
 Thank you for taking part. On the following pages you will read a short scenario and then make a series of decisions.
+
+--- consent
+
+# Informed Consent to Participate in Research
+
+**Research: "Deciding between probability and non-probability survey panels: Importance analysis and trade-offs between key attributes"**
+
+1. You are invited to participate in the research study "Deciding between probability and non-probability survey panels: Importance analysis and trade-offs between key attributes", which is being conducted as part of a doctoral dissertation by Andrea Ivanovska, Doctoral Candidate. The research is being conducted at the Faculty of Arts, University of Ljubljana, under the supervision of Prof. Dr. Vasja Vehovar. The purpose of the research is to systematically investigate the decision-making processes of survey experts and to understand how researchers prioritize bias relative to other survey features.
+2. If you decide to participate, your task will be to complete an online questionnaire. The questionnaire includes evaluating 6 short, hypothetical research scenarios (vignettes), answering questions about your professional experience, and a few demographic questions.
+3. The survey will last approximately 20 minutes. You will not receive any compensation for participating in the study.
+4. Participation in this research does not involve any significant or foreseeable risks. The task is a low-stress cognitive exercise, and the probability of harm or discomfort does not exceed that encountered in everyday life.
+5. There are no direct benefits, such as payment or services, for individual participants. The primary benefit of this research is to the scientific community. The findings will contribute to a better understanding of survey methodology.
+6. Your participation in the research is entirely voluntary, and you may stop at any time by closing your browser. Please note: Because the survey is completely anonymous, it will not be possible to identify and withdraw your data after you have submitted your responses.
+7. All measures will be taken to protect your privacy and confidentiality. The online survey is designed to be completely anonymous; no personally identifiable information (such as name, email, or IP address) will be collected or stored. The fully anonymised data may be published in public repositories in accordance with open science principles, ensuring that no individual can be identified. In all research reports and publications, data will only be presented in an aggregated and anonymised format.
+8. For any additional questions, you can contact the researcher, Andrea Ivanovska (ai67517@student.uni-lj.si), or the Ethics Committee of the Faculty of Arts (vloge.keff@ff.uni-lj.si).
+
+The research was approved on 10 November 2025 by the Ethics Committee of the Faculty of Arts, University of Ljubljana.
+
+By checking the box below and clicking "I agree and wish to continue," I confirm that I have read and understood this statement, that I am 18 years of age or older, and that my participation is voluntary and anonymous. I permit the use of the collected data for scientific research purposes.
+
+```{r}
+sd_question(
+  type   = "mc_multiple",
+  id     = "consent",
+  label  = "",
+  option = c("I agree to participate and confirm that I am 18 years of age or older." = "yes")
+)
+
+sd_next(label = "I agree and wish to continue")
+```
+
+--- background
+
+# About you
+
+```{r}
+# PROVISIONAL: replace with your final list of background questions
+
+sd_question(
+  type   = "mc",
+  id     = "sector",
+  label  = "Where do you mainly work?",
+  option = c("University / research institute"   = "academic",
+             "Public sector / government"        = "public",
+             "Private company / market research" = "private",
+             "Other"                             = "other")
+)
+
+sd_question(
+  type   = "mc",
+  id     = "experience",
+  label  = "How many years have you worked on surveys?",
+  option = c("Less than 3" = "lt3", "3-9" = "3to9", "10 or more" = "10plus")
+)
+
+sd_question(
+  type   = "mc",
+  id     = "used_panels",
+  label  = "Which sample types have you used in your own projects?",
+  option = c("Only probability samples"    = "prob",
+             "Only nonprobability samples" = "nonprob",
+             "Both"                        = "both",
+             "Neither"                     = "neither")
+)
+
+sd_question(
+  type   = "mc",
+  id     = "age_group",
+  label  = "What is your age?",
+  option = c("18-34" = "18_34", "35-49" = "35_49", "50-64" = "50_64",
+             "65 or older" = "65plus", "Prefer not to say" = "na")
+)
+
+sd_question(
+  type   = "mc",
+  id     = "gender",
+  label  = "What is your gender?",
+  option = c("Woman" = "woman", "Man" = "man", "Other" = "other",
+             "Prefer not to say" = "na")
+)
+
+sd_question(
+  type   = "text",
+  id     = "country",
+  label  = "In which country do you mainly work?"
+)
+```
 
 --- scenario
 
@@ -52,7 +141,7 @@ On the next pages, this scenario stays the same. Only the specific circumstances
 
 --- task_1
 
-# Decision 1 of 8
+# Decision 1 of 6
 
 <details><summary>Show the scenario and assumptions again</summary>
 Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
@@ -71,20 +160,20 @@ sd_question(
 sd_question(
   type   = "mc_buttons",
   id     = "strength_1",
-  label  = "How strong is your preference for the sample type you chose?",
+  label  = "On a scale from 1 to 7, which sample type do you prefer, and how strongly?",
   option = strength_options
 )
 
 sd_question(
   type   = "numeric",
   id     = "maxprice_1",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+  label  = "In this situation, what is the highest price (in &euro;) you would pay for the Probability-based online panel?"
 )
 ```
 
 --- task_2
 
-# Decision 2 of 8
+# Decision 2 of 6
 
 <details><summary>Show the scenario and assumptions again</summary>
 Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
@@ -103,20 +192,20 @@ sd_question(
 sd_question(
   type   = "mc_buttons",
   id     = "strength_2",
-  label  = "How strong is your preference for the sample type you chose?",
+  label  = "On a scale from 1 to 7, which sample type do you prefer, and how strongly?",
   option = strength_options
 )
 
 sd_question(
   type   = "numeric",
   id     = "maxprice_2",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+  label  = "In this situation, what is the highest price (in &euro;) you would pay for the Probability-based online panel?"
 )
 ```
 
 --- task_3
 
-# Decision 3 of 8
+# Decision 3 of 6
 
 <details><summary>Show the scenario and assumptions again</summary>
 Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
@@ -135,20 +224,20 @@ sd_question(
 sd_question(
   type   = "mc_buttons",
   id     = "strength_3",
-  label  = "How strong is your preference for the sample type you chose?",
+  label  = "On a scale from 1 to 7, which sample type do you prefer, and how strongly?",
   option = strength_options
 )
 
 sd_question(
   type   = "numeric",
   id     = "maxprice_3",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+  label  = "In this situation, what is the highest price (in &euro;) you would pay for the Probability-based online panel?"
 )
 ```
 
 --- task_4
 
-# Decision 4 of 8
+# Decision 4 of 6
 
 <details><summary>Show the scenario and assumptions again</summary>
 Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
@@ -167,20 +256,20 @@ sd_question(
 sd_question(
   type   = "mc_buttons",
   id     = "strength_4",
-  label  = "How strong is your preference for the sample type you chose?",
+  label  = "On a scale from 1 to 7, which sample type do you prefer, and how strongly?",
   option = strength_options
 )
 
 sd_question(
   type   = "numeric",
   id     = "maxprice_4",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+  label  = "In this situation, what is the highest price (in &euro;) you would pay for the Probability-based online panel?"
 )
 ```
 
 --- task_5
 
-# Decision 5 of 8
+# Decision 5 of 6
 
 <details><summary>Show the scenario and assumptions again</summary>
 Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
@@ -199,20 +288,20 @@ sd_question(
 sd_question(
   type   = "mc_buttons",
   id     = "strength_5",
-  label  = "How strong is your preference for the sample type you chose?",
+  label  = "On a scale from 1 to 7, which sample type do you prefer, and how strongly?",
   option = strength_options
 )
 
 sd_question(
   type   = "numeric",
   id     = "maxprice_5",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+  label  = "In this situation, what is the highest price (in &euro;) you would pay for the Probability-based online panel?"
 )
 ```
 
 --- task_6
 
-# Decision 6 of 8
+# Decision 6 of 6
 
 <details><summary>Show the scenario and assumptions again</summary>
 Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
@@ -231,78 +320,14 @@ sd_question(
 sd_question(
   type   = "mc_buttons",
   id     = "strength_6",
-  label  = "How strong is your preference for the sample type you chose?",
+  label  = "On a scale from 1 to 7, which sample type do you prefer, and how strongly?",
   option = strength_options
 )
 
 sd_question(
   type   = "numeric",
   id     = "maxprice_6",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
-)
-```
-
---- task_7
-
-# Decision 7 of 8
-
-<details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
-</details>
-
-```{r}
-sd_output("vignette_7")
-
-sd_question(
-  type   = "mc_buttons",
-  id     = "choice_7",
-  label  = "Based on the scenario above, which sample type would you choose?",
-  option = choice_options
-)
-
-sd_question(
-  type   = "mc_buttons",
-  id     = "strength_7",
-  label  = "How strong is your preference for the sample type you chose?",
-  option = strength_options
-)
-
-sd_question(
-  type   = "numeric",
-  id     = "maxprice_7",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
-)
-```
-
---- task_8
-
-# Decision 8 of 8
-
-<details><summary>Show the scenario and assumptions again</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
-</details>
-
-```{r}
-sd_output("vignette_8")
-
-sd_question(
-  type   = "mc_buttons",
-  id     = "choice_8",
-  label  = "Based on the scenario above, which sample type would you choose?",
-  option = choice_options
-)
-
-sd_question(
-  type   = "mc_buttons",
-  id     = "strength_8",
-  label  = "How strong is your preference for the sample type you chose?",
-  option = strength_options
-)
-
-sd_question(
-  type   = "numeric",
-  id     = "maxprice_8",
-  label  = "What is the maximum price (in &euro;) you would be willing to pay for this sample?"
+  label  = "In this situation, what is the highest price (in &euro;) you would pay for the Probability-based online panel?"
 )
 ```
 
