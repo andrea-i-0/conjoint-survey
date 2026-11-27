@@ -30,7 +30,7 @@ strength_options <- c(
 
 Thank you for taking part. On the following pages you will read a short scenario and then make a series of decisions.
 
---- consent
+--- consent_page
 
 # Informed Consent to Participate in Research
 
