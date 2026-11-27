@@ -4100,6 +4100,239 @@ font-weight: 800;
 <h1>Welcome</h1>
 <p>Thank you for taking part. On the following pages you will read a short scenario and then make a series of decisions.</p>
 </section>
+<div id="consent" class="sd_page">
+<section id="informed-consent-to-participate-in-research" class="level1">
+<h1>Informed Consent to Participate in Research</h1>
+<p><strong>Research: “Deciding between probability and non-probability survey panels: Importance analysis and trade-offs between key attributes”</strong></p>
+<ol type="1">
+<li>You are invited to participate in the research study “Deciding between probability and non-probability survey panels: Importance analysis and trade-offs between key attributes”, which is being conducted as part of a doctoral dissertation by Andrea Ivanovska, Doctoral Candidate. The research is being conducted at the Faculty of Arts, University of Ljubljana, under the supervision of Prof. Dr. Vasja Vehovar. The purpose of the research is to systematically investigate the decision-making processes of survey experts and to understand how researchers prioritize bias relative to other survey features.</li>
+<li>If you decide to participate, your task will be to complete an online questionnaire. The questionnaire includes evaluating 6 short, hypothetical research scenarios (vignettes), answering questions about your professional experience, and a few demographic questions.</li>
+<li>The survey will last approximately 20 minutes. You will not receive any compensation for participating in the study.</li>
+<li>Participation in this research does not involve any significant or foreseeable risks. The task is a low-stress cognitive exercise, and the probability of harm or discomfort does not exceed that encountered in everyday life.</li>
+<li>There are no direct benefits, such as payment or services, for individual participants. The primary benefit of this research is to the scientific community. The findings will contribute to a better understanding of survey methodology.</li>
+<li>Your participation in the research is entirely voluntary, and you may stop at any time by closing your browser. Please note: Because the survey is completely anonymous, it will not be possible to identify and withdraw your data after you have submitted your responses.</li>
+<li>All measures will be taken to protect your privacy and confidentiality. The online survey is designed to be completely anonymous; no personally identifiable information (such as name, email, or IP address) will be collected or stored. The fully anonymised data may be published in public repositories in accordance with open science principles, ensuring that no individual can be identified. In all research reports and publications, data will only be presented in an aggregated and anonymised format.</li>
+<li>For any additional questions, you can contact the researcher, Andrea Ivanovska (ai67517@student.uni-lj.si), or the Ethics Committee of the Faculty of Arts (vloge.keff@ff.uni-lj.si).</li>
+</ol>
+<p>The research was approved on 10 November 2025 by the Ethics Committee of the Faculty of Arts, University of Ljubljana.</p>
+<p>By checking the box below and clicking “I agree and wish to continue,” I confirm that I have read and understood this statement, that I am 18 years of age or older, and that my participation is voluntary and anonymous. I permit the use of the collected data for scientific research purposes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-consent" data-question-id="consent" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;consent_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;consent_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="consent" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="consent-label">
+<label class="control-label" id="consent-label" for="consent"></label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="consent" value="yes">
+<span>I agree to participate and confirm that I am 18 years of age or older.</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div data-next-page style="margin-top: 1rem; margin-bottom: 0.5rem;">
+<button class="btn btn-default action-button sd-enter-button" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="display: block; margin: auto;" type="button"><span class="action-label">I agree and wish to continue</span></button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="background" class="sd_page">
+<section id="about-you" class="level1">
+<h1>About you</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-sector" data-question-id="sector" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;sector_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;sector_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="sector" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="sector-label">
+<label class="control-label" id="sector-label" for="sector"><p>Where do you mainly work?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="sector" value="academic">
+<span>University / research institute</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="sector" value="public">
+<span>Public sector / government</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="sector" value="private">
+<span>Private company / market research</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="sector" value="other">
+<span>Other</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container-experience" data-question-id="experience" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;experience_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;experience_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="experience" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="experience-label">
+<label class="control-label" id="experience-label" for="experience"><p>How many years have you worked on surveys?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="experience" value="lt3">
+<span>Less than 3</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="experience" value="3to9">
+<span>3-9</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="experience" value="10plus">
+<span>10 or more</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container-used_panels" data-question-id="used_panels" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;used_panels_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;used_panels_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="used_panels" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="used_panels-label">
+<label class="control-label" id="used_panels-label" for="used_panels"><p>Which sample types have you used in your own projects?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="used_panels" value="prob">
+<span>Only probability samples</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="used_panels" value="nonprob">
+<span>Only nonprobability samples</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="used_panels" value="both">
+<span>Both</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="used_panels" value="neither">
+<span>Neither</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container-age_group" data-question-id="age_group" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;age_group_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;age_group_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="age_group" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="age_group-label">
+<label class="control-label" id="age_group-label" for="age_group"><p>What is your age?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="age_group" value="18_34">
+<span>18-34</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="age_group" value="35_49">
+<span>35-49</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="age_group" value="50_64">
+<span>50-64</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="age_group" value="65plus">
+<span>65 or older</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="age_group" value="na">
+<span>Prefer not to say</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container-gender" data-question-id="gender" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;gender_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;gender_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="gender" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="gender-label">
+<label class="control-label" id="gender-label" for="gender"><p>What is your gender?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender" value="woman">
+<span>Woman</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender" value="man">
+<span>Man</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender" value="other">
+<span>Other</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender" value="na">
+<span>Prefer not to say</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+<div class="cell-output-display">
+<div id="container-country" data-question-id="country" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;country_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;country_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="country-label" for="country"><p>In which country do you mainly work?</p>
+</label>
+<input id="country" type="text" class="shiny-input-text form-control" value data-update-on="change">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+</div>
+</section>
+</div>
 <section id="scenario" class="level1 sd_page">
 <h1>Scenario</h1>
 <p>Suppose you are the responsible manager of a three-year research project that has already been approved. The project includes a survey of the general population (n = 1,000, 20 minutes), which is very important for the project. In the survey, you are interested in a set of key variables that relate to characteristics of the general population (not interested in detailed characteristics of specific subgroups).</p>
@@ -4119,8 +4352,8 @@ font-weight: 800;
 <p>On the next pages, this scenario stays the same. Only the specific circumstances change. Please read them carefully each time.</p>
 </section>
 <div id="task_1" class="sd_page">
-<section id="decision-1-of-8" class="level1">
-<h1>Decision 1 of 8</h1>
+<section id="decision-1-of-6" class="level1">
+<h1>Decision 1 of 6</h1>
 <details>
 <summary>
 Show the scenario and assumptions again
@@ -4193,7 +4426,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-strength_1" data-question-id="strength_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_1-label" for="strength_1"><p>How strong is your preference for the sample type you chose?</p>
+<label class="control-label" id="strength_1-label" for="strength_1"><p>On a scale from 1 to 7, which sample type do you prefer, and how strongly?</p>
 </label>
 <br>
 <div id="strength_1" class="radio-group-buttons">
@@ -4201,7 +4434,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_1" value="1">
-1 - Strongly prefer Non-Probability
+1 - Strongly prefer Nonprobability
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4219,7 +4452,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_1" value="4">
-4
+4 - No preference
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4249,7 +4482,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-maxprice_1" data-question-id="maxprice_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_1-label" for="maxprice_1"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+<label class="control-label" id="maxprice_1-label" for="maxprice_1"><p>In this situation, what is the highest price (in €) you would pay for the Probability-based online panel?</p>
 </label>
 <input id="maxprice_1" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
@@ -4260,8 +4493,8 @@ Nonprobability online panel
 </section>
 </div>
 <div id="task_2" class="sd_page">
-<section id="decision-2-of-8" class="level1">
-<h1>Decision 2 of 8</h1>
+<section id="decision-2-of-6" class="level1">
+<h1>Decision 2 of 6</h1>
 <details>
 <summary>
 Show the scenario and assumptions again
@@ -4334,7 +4567,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-strength_2" data-question-id="strength_2" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_2_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_2_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_2-label" for="strength_2"><p>How strong is your preference for the sample type you chose?</p>
+<label class="control-label" id="strength_2-label" for="strength_2"><p>On a scale from 1 to 7, which sample type do you prefer, and how strongly?</p>
 </label>
 <br>
 <div id="strength_2" class="radio-group-buttons">
@@ -4342,7 +4575,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_2" value="1">
-1 - Strongly prefer Non-Probability
+1 - Strongly prefer Nonprobability
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4360,7 +4593,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_2" value="4">
-4
+4 - No preference
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4390,7 +4623,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-maxprice_2" data-question-id="maxprice_2" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_2_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_2_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_2-label" for="maxprice_2"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+<label class="control-label" id="maxprice_2-label" for="maxprice_2"><p>In this situation, what is the highest price (in €) you would pay for the Probability-based online panel?</p>
 </label>
 <input id="maxprice_2" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
@@ -4401,8 +4634,8 @@ Nonprobability online panel
 </section>
 </div>
 <div id="task_3" class="sd_page">
-<section id="decision-3-of-8" class="level1">
-<h1>Decision 3 of 8</h1>
+<section id="decision-3-of-6" class="level1">
+<h1>Decision 3 of 6</h1>
 <details>
 <summary>
 Show the scenario and assumptions again
@@ -4475,7 +4708,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-strength_3" data-question-id="strength_3" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_3_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_3_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_3-label" for="strength_3"><p>How strong is your preference for the sample type you chose?</p>
+<label class="control-label" id="strength_3-label" for="strength_3"><p>On a scale from 1 to 7, which sample type do you prefer, and how strongly?</p>
 </label>
 <br>
 <div id="strength_3" class="radio-group-buttons">
@@ -4483,7 +4716,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_3" value="1">
-1 - Strongly prefer Non-Probability
+1 - Strongly prefer Nonprobability
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4501,7 +4734,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_3" value="4">
-4
+4 - No preference
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4531,7 +4764,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-maxprice_3" data-question-id="maxprice_3" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_3_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_3_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_3-label" for="maxprice_3"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+<label class="control-label" id="maxprice_3-label" for="maxprice_3"><p>In this situation, what is the highest price (in €) you would pay for the Probability-based online panel?</p>
 </label>
 <input id="maxprice_3" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
@@ -4542,8 +4775,8 @@ Nonprobability online panel
 </section>
 </div>
 <div id="task_4" class="sd_page">
-<section id="decision-4-of-8" class="level1">
-<h1>Decision 4 of 8</h1>
+<section id="decision-4-of-6" class="level1">
+<h1>Decision 4 of 6</h1>
 <details>
 <summary>
 Show the scenario and assumptions again
@@ -4616,7 +4849,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-strength_4" data-question-id="strength_4" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_4_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_4_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_4-label" for="strength_4"><p>How strong is your preference for the sample type you chose?</p>
+<label class="control-label" id="strength_4-label" for="strength_4"><p>On a scale from 1 to 7, which sample type do you prefer, and how strongly?</p>
 </label>
 <br>
 <div id="strength_4" class="radio-group-buttons">
@@ -4624,7 +4857,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_4" value="1">
-1 - Strongly prefer Non-Probability
+1 - Strongly prefer Nonprobability
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4642,7 +4875,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_4" value="4">
-4
+4 - No preference
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4672,7 +4905,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-maxprice_4" data-question-id="maxprice_4" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_4_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_4_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_4-label" for="maxprice_4"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+<label class="control-label" id="maxprice_4-label" for="maxprice_4"><p>In this situation, what is the highest price (in €) you would pay for the Probability-based online panel?</p>
 </label>
 <input id="maxprice_4" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
@@ -4683,8 +4916,8 @@ Nonprobability online panel
 </section>
 </div>
 <div id="task_5" class="sd_page">
-<section id="decision-5-of-8" class="level1">
-<h1>Decision 5 of 8</h1>
+<section id="decision-5-of-6" class="level1">
+<h1>Decision 5 of 6</h1>
 <details>
 <summary>
 Show the scenario and assumptions again
@@ -4757,7 +4990,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-strength_5" data-question-id="strength_5" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_5_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_5_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_5-label" for="strength_5"><p>How strong is your preference for the sample type you chose?</p>
+<label class="control-label" id="strength_5-label" for="strength_5"><p>On a scale from 1 to 7, which sample type do you prefer, and how strongly?</p>
 </label>
 <br>
 <div id="strength_5" class="radio-group-buttons">
@@ -4765,7 +4998,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_5" value="1">
-1 - Strongly prefer Non-Probability
+1 - Strongly prefer Nonprobability
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4783,7 +5016,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_5" value="4">
-4
+4 - No preference
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4813,7 +5046,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-maxprice_5" data-question-id="maxprice_5" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_5_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_5_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_5-label" for="maxprice_5"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+<label class="control-label" id="maxprice_5-label" for="maxprice_5"><p>In this situation, what is the highest price (in €) you would pay for the Probability-based online panel?</p>
 </label>
 <input id="maxprice_5" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
@@ -4824,8 +5057,8 @@ Nonprobability online panel
 </section>
 </div>
 <div id="task_6" class="sd_page">
-<section id="decision-6-of-8" class="level1">
-<h1>Decision 6 of 8</h1>
+<section id="decision-6-of-6" class="level1">
+<h1>Decision 6 of 6</h1>
 <details>
 <summary>
 Show the scenario and assumptions again
@@ -4898,7 +5131,7 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-strength_6" data-question-id="strength_6" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_6_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_6_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_6-label" for="strength_6"><p>How strong is your preference for the sample type you chose?</p>
+<label class="control-label" id="strength_6-label" for="strength_6"><p>On a scale from 1 to 7, which sample type do you prefer, and how strongly?</p>
 </label>
 <br>
 <div id="strength_6" class="radio-group-buttons">
@@ -4906,7 +5139,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_6" value="1">
-1 - Strongly prefer Non-Probability
+1 - Strongly prefer Nonprobability
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4924,7 +5157,7 @@ Nonprobability online panel
 <div class="btn-group btn-group-toggle" role="group">
 <button class="btn radiobtn btn-default">
 <input type="radio" autocomplete="off" name="strength_6" value="4">
-4
+4 - No preference
 </button>
 </div>
 <div class="btn-group btn-group-toggle" role="group">
@@ -4954,291 +5187,9 @@ Nonprobability online panel
 <div class="cell-output-display">
 <div id="container-maxprice_6" data-question-id="maxprice_6" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_6_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_6_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_6-label" for="maxprice_6"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
+<label class="control-label" id="maxprice_6-label" for="maxprice_6"><p>In this situation, what is the highest price (in €) you would pay for the Probability-based online panel?</p>
 </label>
 <input id="maxprice_6" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div id="task_7" class="sd_page">
-<section id="decision-7-of-8" class="level1">
-<h1>Decision 7 of 8</h1>
-<details>
-<summary>
-Show the scenario and assumptions again
-</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
-</details>
-<div class="cell">
-<div class="cell-output-display no-overflow-x">
-<span id="vignette_7" class="shiny-html-output"></span>
-<script>
-    $(document).ready(function() {
-      var id = 'vignette_7', key = 'surveydown_reactive_' + id;
-
-      function save() {
-        var content = $('#' + id).html();
-        if (content && content.trim()) {
-          try {
-            localStorage.setItem(key, content);
-          } catch(e) {
-            console.warn('Could not save to localStorage:', e);
-          }
-        }
-      }
-
-      function restore() {
-        try {
-          var saved = localStorage.getItem(key);
-          var el = $('#' + id);
-          if (saved && el.length && !el.html().trim()) {
-            el.html(saved);
-          }
-        } catch(e) {
-          console.warn('Could not restore from localStorage:', e);
-        }
-      }
-
-      setTimeout(restore, 100);
-      new MutationObserver(function() { setTimeout(save, 200); })
-        .observe(document.getElementById(id) || document.body, {childList: true, subtree: true});
-      $(window).on('beforeunload', save);
-    });
-    </script>
-</div>
-<div class="cell-output-display">
-<div id="container-choice_7" data-question-id="choice_7" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;choice_7_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;choice_7_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="choice_7-label" for="choice_7"><p>Based on the scenario above, which sample type would you choose?</p>
-</label>
-<br>
-<div id="choice_7" class="radio-group-buttons">
-<div aria-labelledby="choice_7-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="choice_7" value="prob">
-Probability-based online panel
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="choice_7" value="nwp">
-Nonprobability online panel
-</button>
-</div>
-</div>
-</div>
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-<div class="cell-output-display">
-<div id="container-strength_7" data-question-id="strength_7" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_7_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_7_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_7-label" for="strength_7"><p>How strong is your preference for the sample type you chose?</p>
-</label>
-<br>
-<div id="strength_7" class="radio-group-buttons">
-<div aria-labelledby="strength_7-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="1">
-1 - Strongly prefer Non-Probability
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="2">
-2
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="3">
-3
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="4">
-4
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="5">
-5
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="6">
-6
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_7" value="7">
-7 - Strongly prefer Probability
-</button>
-</div>
-</div>
-</div>
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-<div class="cell-output-display">
-<div id="container-maxprice_7" data-question-id="maxprice_7" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_7_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_7_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_7-label" for="maxprice_7"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
-</label>
-<input id="maxprice_7" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div id="task_8" class="sd_page">
-<section id="decision-8-of-8" class="level1">
-<h1>Decision 8 of 8</h1>
-<details>
-<summary>
-Show the scenario and assumptions again
-</summary>
-Three-year approved project; general population survey (n = 1,000, 20 minutes); you are interested in key variables for the whole population, not subgroups. You choose between a Probability-based Online Panel and a commercial Nonprobability Online Panel. All assumptions from the scenario page still apply.
-</details>
-<div class="cell">
-<div class="cell-output-display no-overflow-x">
-<span id="vignette_8" class="shiny-html-output"></span>
-<script>
-    $(document).ready(function() {
-      var id = 'vignette_8', key = 'surveydown_reactive_' + id;
-
-      function save() {
-        var content = $('#' + id).html();
-        if (content && content.trim()) {
-          try {
-            localStorage.setItem(key, content);
-          } catch(e) {
-            console.warn('Could not save to localStorage:', e);
-          }
-        }
-      }
-
-      function restore() {
-        try {
-          var saved = localStorage.getItem(key);
-          var el = $('#' + id);
-          if (saved && el.length && !el.html().trim()) {
-            el.html(saved);
-          }
-        } catch(e) {
-          console.warn('Could not restore from localStorage:', e);
-        }
-      }
-
-      setTimeout(restore, 100);
-      new MutationObserver(function() { setTimeout(save, 200); })
-        .observe(document.getElementById(id) || document.body, {childList: true, subtree: true});
-      $(window).on('beforeunload', save);
-    });
-    </script>
-</div>
-<div class="cell-output-display">
-<div id="container-choice_8" data-question-id="choice_8" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;choice_8_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;choice_8_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="choice_8-label" for="choice_8"><p>Based on the scenario above, which sample type would you choose?</p>
-</label>
-<br>
-<div id="choice_8" class="radio-group-buttons">
-<div aria-labelledby="choice_8-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="choice_8" value="prob">
-Probability-based online panel
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="choice_8" value="nwp">
-Nonprobability online panel
-</button>
-</div>
-</div>
-</div>
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-<div class="cell-output-display">
-<div id="container-strength_8" data-question-id="strength_8" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;strength_8_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;strength_8_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
-<label class="control-label" id="strength_8-label" for="strength_8"><p>How strong is your preference for the sample type you chose?</p>
-</label>
-<br>
-<div id="strength_8" class="radio-group-buttons">
-<div aria-labelledby="strength_8-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="1">
-1 - Strongly prefer Non-Probability
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="2">
-2
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="3">
-3
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="4">
-4
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="5">
-5
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="6">
-6
-</button>
-</div>
-<div class="btn-group btn-group-toggle" role="group">
-<button class="btn radiobtn btn-default">
-<input type="radio" autocomplete="off" name="strength_8" value="7">
-7 - Strongly prefer Probability
-</button>
-</div>
-</div>
-</div>
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-<div class="cell-output-display">
-<div id="container-maxprice_8" data-question-id="maxprice_8" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;maxprice_8_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;maxprice_8_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div class="form-group shiny-input-container">
-<label class="control-label" id="maxprice_8-label" for="maxprice_8"><p>What is the maximum price (in €) you would be willing to pay for this sample?</p>
-</label>
-<input id="maxprice_8" type="text" class="shiny-input-text form-control sd-numeric" value data-update-on="change">
 </div>
 <span class="hidden-asterisk">*</span>
 </div>
